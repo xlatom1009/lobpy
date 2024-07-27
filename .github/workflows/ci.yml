@@ -61,7 +61,7 @@ jobs:
       matrix:
         python:
         - "3.11"
-        - "3.12" 
+        - "3.12"
         platform:
         - ubuntu-latest
         - macos-latest

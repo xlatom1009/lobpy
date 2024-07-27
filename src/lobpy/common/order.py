@@ -1,4 +1,3 @@
-
 __author__ = "nap"
 __copyright__ = "nap"
 __license__ = "MIT"
@@ -6,8 +5,9 @@ __license__ = "MIT"
 import abc
 import copy
 import dataclasses
-from typing import Self
 import uuid
+from typing import Self
+
 from lobpy.common.contract import Contract
 from lobpy.util.constant import Side, TimeInForce
 from lobpy.util.meta import EnforcedAttributeMeta
@@ -19,6 +19,7 @@ class OrderMeta(EnforcedAttributeMeta, abc.ABCMeta):
     Enforce child classes to have name, dependencies, builder and version.
     Also being able to have abstract methods.
     """
+
     pass
 
 
@@ -40,17 +41,14 @@ class OrderBase:
             msg = "Size must be set for an Order object"
             raise NotImplementedError(msg)
 
-    def copy(
-        self,
-        **changes
-    ) -> Self:
+    def copy(self, **changes) -> Self:
         order = copy.deepcopy(self)
         return dataclasses.replace(order, **changes)
 
 
 @dataclasses.dataclass(frozen=True, kw_only=True)
 class MarketOrder(OrderBase, metaclass=OrderMeta):
-    '''
+    """
     A market order is an instruction to buy or sell a security
       immediately at the current price.
 
@@ -58,7 +56,8 @@ class MarketOrder(OrderBase, metaclass=OrderMeta):
     :param id: identifier of order
     :param sym: instrument identifier
 
-    '''
+    """
+
     pass
 
 

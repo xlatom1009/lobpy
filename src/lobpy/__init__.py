@@ -1,5 +1,3 @@
-import sys
-
 __author__ = "nap"
 __copyright__ = "nap"
 __license__ = "MIT"

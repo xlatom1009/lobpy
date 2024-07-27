@@ -14,11 +14,7 @@ def test_order_instantiation():
     side = Side.SELL
     time_in_force = TimeInForce.GFD
     mo = MarketOrder(
-        id=id,
-        sym=stock,
-        size=size,
-        side=side,
-        time_in_force=time_in_force
+        id=id, sym=stock, size=size, side=side, time_in_force=time_in_force
     )
     assert mo.id == id
     assert mo.sym == stock
