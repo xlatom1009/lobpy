@@ -26,7 +26,7 @@ class OrderMeta(EnforcedAttributeMeta, abc.ABCMeta):
 @dataclasses.dataclass(frozen=True, kw_only=True)
 class OrderBase:
     id: str = None
-    sym: Contract
+    contract: Contract
     size: float
     side: Side
     traded: float = 0
@@ -35,11 +35,11 @@ class OrderBase:
     def __post_init__(self) -> None:
         object.__setattr__(self, "id", self.id or uuid.uuid4())
 
-    def check_required_attributes(self):
-        req_attrs = [self.size]
+    def _check_required_attributes(self):
+        req_attrs = [self.id, self.contract, self.size, self.side, self.time_in_force]
         if any([(rt is None) for rt in req_attrs]):
-            msg = "Size must be set for an Order object"
-            raise NotImplementedError(msg)
+            msg = "All required attributes must not be None."
+            raise ValueError(msg)
 
     def copy(self, **changes) -> Self:
         order = copy.deepcopy(self)
@@ -54,7 +54,7 @@ class MarketOrder(OrderBase, metaclass=OrderMeta):
 
 
     :param id: identifier of order
-    :param sym: instrument identifier
+    :param contract: instrument identifier
 
     """
 
@@ -63,4 +63,11 @@ class MarketOrder(OrderBase, metaclass=OrderMeta):
 
 @dataclasses.dataclass(frozen=True, kw_only=True)
 class LimitOrder(OrderBase, metaclass=OrderMeta):
-    limit_price: float
+    price: float
+
+    def _check_required_attributes(self):
+        super()._check_required_attributes()
+        req_attrs = [self.price]
+        if any([(rt is None) for rt in req_attrs]):
+            msg = "All required attributes must not be None."
+            raise ValueError(msg)
