@@ -1,6 +1,6 @@
 .. image:: https://img.shields.io/badge/python-3.11%20%7C%203.12-blue
-	:target: https://img.shields.io/badge/python-3.11%20%7C%203.12-blue
-	:alt: Python version
+   :target: https://img.shields.io/badge/python-3.11%20%7C%203.12-blue
+   :alt: Python version
 
 .. image:: https://github.com/xlatom1009/lobpy/actions/workflows/ci.yml/badge.svg?branch=main
    :target: https://github.com/xlatom1009/lobpy/actions/workflows/ci.yml/badge.svg?branch=main
@@ -14,9 +14,6 @@
 .. These are examples of badges you might want to add to your README:
    please update the URLs accordingly
 
-    .. image:: https://api.cirrus-ci.com/github/<USER>/lobpy.svg?branch=main
-        :alt: Built Status
-        :target: https://cirrus-ci.com/github/<USER>/lobpy
     .. image:: https://readthedocs.org/projects/lobpy/badge/?version=latest
         :alt: ReadTheDocs
         :target: https://lobpy.readthedocs.io/en/stable/
@@ -37,6 +34,9 @@
         :target: https://twitter.com/lobpy
 |
 
+.. image:: https://img.shields.io/badge/stability-wip-lightgrey.svg
+   :target: https://img.shields.io/badge/stability-wip-lightgrey.svg
+   :alt: Statbility Status
 =====
 lobpy
 =====
