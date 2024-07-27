@@ -1,3 +1,6 @@
+.. image:: https://coveralls.io/repos/github/xlatom1009/lobpy/badge.svg?branch=main
+   :target: https://coveralls.io/github/xlatom1009/lobpy?branch=main
+
 .. These are examples of badges you might want to add to your README:
    please update the URLs accordingly
 
