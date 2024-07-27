@@ -1,5 +1,15 @@
+.. image:: https://img.shields.io/badge/python-3.11%20%7C%203.12-blue
+	:target: https://img.shields.io/badge/python-3.11%20%7C%203.12-blue
+	:alt: Python version
+
+.. image:: https://github.com/xlatom1009/lobpy/actions/workflows/ci.yml/badge.svg?branch=main
+   :target: https://github.com/xlatom1009/lobpy/actions/workflows/ci.yml/badge.svg?branch=main
+   :alt: Test status
+
 .. image:: https://coveralls.io/repos/github/xlatom1009/lobpy/badge.svg?branch=main
    :target: https://coveralls.io/github/xlatom1009/lobpy?branch=main
+   :alt: Coverage status
+
 
 .. These are examples of badges you might want to add to your README:
    please update the URLs accordingly
